@@ -9,13 +9,13 @@ import com.me.todothing.model.Todo;
 
 public interface ITodoService {
 
-	List<Todo> getTodosByUser(String user);
+	List<Todo> getAllTodos();
 
 	Optional<Todo> getTodoById(long id);
 
 	void updateTodo(Todo todo);
 
-	void addTodo(String name, String desc, Date targetDate, boolean isDone);
+	void addTodo(String desc, Date targetDate, boolean isDone);
 
 	void deleteTodo(long id);
 	

@@ -1,5 +1,7 @@
 <%@ include file="common/header.jspf"%>
-<%@ include file="common/navigation.jspf"%>
+<nav role="navigation" class="navbar navbar-default" href="/list-todos">
+		<a href="/" class="navbar-brand">To-Do List</a>
+</nav>
 <div class="container">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3 ">
@@ -22,11 +24,22 @@
 							<form:errors path="targetDate" cssClass="text-warning" />
 						</fieldset>
 
-						<button type="submit" class="btn btn-success">Save</button>
+						<button type="submit" class="btn btn-success btn-block" >Save</button>
 					</form:form>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<%@ include file="common/footer.jspf"%>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script
+	src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
+<script>
+	$('#targetDate').datepicker({
+		format : 'dd/mm/yyyy'
+	});
+</script>
+
+</body>
+</html>

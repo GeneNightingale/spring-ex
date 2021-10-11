@@ -17,8 +17,6 @@ public class Todo {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	private String userName;
-
 	@Size(min = 10, message = "Enter at least 10 Characters...")
 	private String description;
 
@@ -28,9 +26,8 @@ public class Todo {
 		super();
 	}
 
-	public Todo(String user, String desc, Date targetDate, boolean isDone) {
+	public Todo(String desc, Date targetDate, boolean isDone) {
 		super();
-		this.userName = user;
 		this.description = desc;
 		this.targetDate = targetDate;
 	}
@@ -43,13 +40,6 @@ public class Todo {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
 
 	public String getDescription() {
 		return description;
